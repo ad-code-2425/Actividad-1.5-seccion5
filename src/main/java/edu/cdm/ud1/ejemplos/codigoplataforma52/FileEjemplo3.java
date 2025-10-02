@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.io.IOException;
 
 // crea una nueva carpeta 
-public class FileEjemplo4 {
+public class FileEjemplo3 {
     public static void main(String args[]) {
         Path path = Paths.get("C:\\prueba\\newdir");
         try {

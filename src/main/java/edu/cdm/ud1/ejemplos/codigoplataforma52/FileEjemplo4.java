@@ -7,11 +7,14 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
-public class FileEjemplo7 {
+public class FileEjemplo4 {
     public static void main(String args[]) {
-        Path sourcePath = Paths.get("C:\\prueba\\origen\\a.txt");
-        Path destinationPath = Paths.get("C:\\prueba\\destino\\a.txt");
+        Path sourcePath = Paths.get("C:\\prueba\\origen");
+        Path destinationPath = Paths.get("C:\\prueba\\destino");
         try {
+             // aunque, los archivos dentro del directorio no se copian, por lo que el nuevo
+            // directorio está vacío incluso cuando el directorio original contiene
+            // archivos.
             Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
         } catch (FileAlreadyExistsException e) {
             System.out.println("el destino existe");

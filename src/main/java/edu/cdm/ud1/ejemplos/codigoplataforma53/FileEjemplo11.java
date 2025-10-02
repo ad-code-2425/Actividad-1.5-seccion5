@@ -10,7 +10,7 @@ import java.io.BufferedWriter;
 import java.nio.file.StandardOpenOption;
 
 public class FileEjemplo11 {
-    // Copy a file
+
     public static void main(String args[]) {
         Path input = Paths.get("C:\\prueba\\origen\\hola.txt");
         Path output = Paths.get("C:\\prueba\\destino\\hola.txt");

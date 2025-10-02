@@ -18,8 +18,11 @@ public class FileEjemplo2 {
             } 
             else {
                 System.out.println("NO existe el path: " + path + " Se procederá a su creación");
-                Files.createFile(path);
 
+                //OJO, si no existe el fichero crea  los directorios intermedios
+                Files.createDirectories(path.getParent());
+                //Finalmente, se crea el fichero
+                Files.createFile(path);
             }
             // ++ añadidas las posibles excepciones al llamar al delete
         } catch (NoSuchFileException x) {
